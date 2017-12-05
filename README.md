@@ -1,7 +1,7 @@
-# RobotFramework
-This is a RF Test Automation Sample Suite using open source framework called Robot Framework.RF is a generic open source test automation framework for acceptance testing and acceptance test-driven development (ATDD). It has easy-to-use tabular test data syntax and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries implemented either with Python or Java.
+RobotFramework
+	This is a RF Test Automation Sample Suite using open source framework called Robot Framework.RF is a generic open source test 		automation framework for acceptance testing and acceptance test-driven development (ATDD). It has easy-to-use tabular test data 	syntax and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries 	implemented either with Python or Java.
     
-    Dependecies:
+ Dependecies:
 
         Python 2.7 or above
 
@@ -17,31 +17,31 @@ Install RF and Selenium:
 
 To learn more about robot framework visit:
 
-http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
+	http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
 
 Some useful commands to run your test:
 
 	To run test against specific browser and environment:
-    	robot -d Results -i tagname -v BROWSER:chrome -v ENVIRONMENT:QA  Tests/Pledge//MonthlyDonationSuite.robot
+    		robot -d Results -i tagname -v BROWSER:chrome -v ENVIRONMENT:QA  Tests/Pledge//MonthlyDonationSuite.robot
 
 	Run Test with specific Tags:
-    	robot -d Results -i tagname Tests/suitename.robot
+    		robot -d Results -i tagname Tests/suitename.robot
 
 	Run Multiple Suites:
-    	robot -d Results -i tagname  Tests
+    		robot -d Results -i tagname  Tests
 
 	Store test results to absolute path
-    	robot -d -i tagname /Users/******/Workspace/TestResults Tests/Suite.robot
+    		robot -d -i tagname /Users/******/Workspace/TestResults Tests/Suite.robot
 
 
 	To change the report name to be specific to what type of testing you are performing:
-    	robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
+    		robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
 
 	Supply Data into variable:
-    	robot -d Results -v Browser:chrome -v https://google.com -i tagname Tests/suitename.robot
+    		robot -d Results -v Browser:chrome -v https://google.com -i tagname Tests/suitename.robot
 
-Randomize test:
-    robot -d Results -randomize Tests/suitename.robot
+	Randomize test:
+    		robot -d Results -randomize Tests/suitename.robot
 
-Debug your test:
-    robot -d Results --loglevel debug  -i tagname  Tests/suitename.robot
+	Debug your test:
+    		robot -d Results --loglevel debug  -i tagname  Tests/suitename.robot
