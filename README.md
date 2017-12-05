@@ -20,26 +20,25 @@ To learn more about robot framework visit:
 Some useful commands to run your test:
 
 	To run test against specific browser and environment:
-    		robot -d Results -i tagname -v BROWSER:chrome -v ENVIRONMENT:QA  Tests/Pledge//MonthlyDonationSuite.robot
+    	   robot -d Results -i tagname -v BROWSER:chrome -v ENVIRONMENT:QA  Tests/Pledge//MonthlyDonationSuite.robot
 
 	Run Test with specific Tags:
-    		robot -d Results -i tagname Tests/suitename.robot
+    	   robot -d Results -i tagname Tests/suitename.robot
 
 	Run Multiple Suites:
-    		robot -d Results -i tagname  Tests
+    	   robot -d Results -i tagname  Tests
 
 	Store test results to absolute path
-    		robot -d -i tagname /Users/******/Workspace/TestResults Tests/Suite.robot
-
+    	   robot -d -i tagname /Users/******/Workspace/TestResults Tests/Suite.robot
 
 	To change the report name to be specific to what type of testing you are performing:
-    		robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
+    	   robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
 
 	Supply Data into variable:
-    		robot -d Results -v Browser:chrome -v https://google.com -i tagname Tests/suitename.robot
+    	   robot -d Results -v Browser:chrome -v https://google.com -i tagname Tests/suitename.robot
 
 	Randomize test:
-    		robot -d Results -randomize Tests/suitename.robot
+    	   robot -d Results -randomize Tests/suitename.robot
 
 	Debug your test:
-    		robot -d Results --loglevel debug  -i tagname  Tests/suitename.robot
+    	   robot -d Results --loglevel debug  -i tagname  Tests/suitename.robot
