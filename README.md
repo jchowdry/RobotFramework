@@ -32,7 +32,7 @@ Some useful commands to run your test:
 	Store test results to absolute path
     	   robot -d -i tagname /Users/******/Workspace/TestResults Tests/Suite.robot
 
-	To change the report name to be specific to what type of testing you are performing:
+	To change the report name to be specific to what type of testing you are performing
     	   robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
 
 	Supply Data into variable:
