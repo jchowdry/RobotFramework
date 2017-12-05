@@ -10,11 +10,9 @@ RobotFramework
         Selenium
 
 Install RF and Selenium:
-
+		pip install robotframework or
 		pip install robotframework-selenium2library
-		Getting Started:
-
-
+		
 To learn more about robot framework visit:
 
 	http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
