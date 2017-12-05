@@ -1,4 +1,4 @@
-#RobotFramework
+RobotFramework
 
 	This is a RF Test Automation Sample Suite using open source framework called Robot Framework.
 	RF is a generic open source test automation framework for acceptance testing and acceptance 
