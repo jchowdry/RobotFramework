@@ -38,7 +38,7 @@ Store test results to absolute path
 
 To change the report name to be specific to what type of testing you are performing:
 
-    robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
+	robot -d Results -i tagname  -N "Full Regression" Tests/suitename.robot
 
 Supply Data into variable:
 
