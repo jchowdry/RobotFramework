@@ -1,8 +1,25 @@
 *** Settings ***
-Documentation
+Documentation    This robot file to go over the different for loop options that RF has to offer
+Library     Selenium2Library
+Library     Collections
+
 
 
 *** Test Cases ***
+# Normal for  for loop
+Test regurla for loop
+    [Tags]  NormalLoop
+    @{SOMEIDS}=    create list  1   2
+    Append To List  ${SOMEIDS}  1111    22222
+    Append To List  ${SOMEIDS}  4444   33333
+    :FOR    ${IDS}   IN      @{SOMEIDS}
+    \       log     ${IDS}
+
+
+#Nested for loop
+Test nested for loop
+    [Documentation]  Nested for loop use a user keyword inside a for loop and have another for loop
+
 #for loop upper limits
 Test For loop in range
     :FOR    ${INDEX}    IN RANGE       6
