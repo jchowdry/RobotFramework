@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20171206 15:47:41.213" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<robot generated="20171206 17:24:57.277" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
 <suite source="/Users/jchowdry/Documents/workspace/RobotFramework/Tests/sample.robot" id="s1" name="Sample">
 <test id="s1-t1" name="Open schedule page and verify the url">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>http://wnyc.demo2.wnyc.net/schedule/</arg>
+<arg>${Demo}/schedule</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20171206 15:47:41.329" level="INFO">Opening browser 'chrome' to base url 'http://wnyc.demo2.wnyc.net/schedule/'</msg>
-<status status="PASS" endtime="20171206 15:47:48.237" starttime="20171206 15:47:41.328"></status>
+<msg timestamp="20171206 17:24:57.483" level="INFO">Opening browser 'chrome' to base url 'http://wnyc.demo2.wnyc.net/schedule'</msg>
+<status status="PASS" endtime="20171206 17:25:03.029" starttime="20171206 17:24:57.482"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
@@ -19,52 +19,29 @@
 <assign>
 <var>${Current_URL}</var>
 </assign>
-<msg timestamp="20171206 15:47:48.239" level="INFO">Executing JavaScript:
+<msg timestamp="20171206 17:25:03.030" level="INFO">Executing JavaScript:
 return window.location.href;</msg>
-<msg timestamp="20171206 15:47:48.250" level="INFO">${Current_URL} = https://wnyc.demo2.wnyc.net/</msg>
-<status status="PASS" endtime="20171206 15:47:48.250" starttime="20171206 15:47:48.238"></status>
+<msg timestamp="20171206 17:25:03.041" level="INFO">${Current_URL} = http://wnyc.demo2.wnyc.net/schedule/2017/dec/06/</msg>
+<status status="PASS" endtime="20171206 17:25:03.042" starttime="20171206 17:25:03.030"></status>
 </kw>
 <kw name="Location Should Be" library="Selenium2Library">
 <doc>Verifies that current URL is exactly `url`.</doc>
 <arguments>
 <arg>${Current_URL}</arg>
 </arguments>
-<msg timestamp="20171206 15:47:48.264" level="INFO">Current location is 'https://wnyc.demo2.wnyc.net/'.</msg>
-<status status="PASS" endtime="20171206 15:47:48.264" starttime="20171206 15:47:48.250"></status>
+<msg timestamp="20171206 17:25:03.048" level="INFO">Current location is 'http://wnyc.demo2.wnyc.net/schedule/2017/dec/06/'.</msg>
+<status status="PASS" endtime="20171206 17:25:03.048" starttime="20171206 17:25:03.042"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${Current_URL}</arg>
 </arguments>
-<status status="PASS" endtime="20171206 15:47:48.265" starttime="20171206 15:47:48.265"></status>
+<status status="PASS" endtime="20171206 17:25:03.049" starttime="20171206 17:25:03.048"></status>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>https://wnyc.demo2.wnyc.net</arg>
-</arguments>
-<assign>
-<var>${Expected_URL}</var>
-</assign>
-<msg timestamp="20171206 15:47:48.266" level="INFO">${Expected_URL} = https://wnyc.demo2.wnyc.net</msg>
-<status status="PASS" endtime="20171206 15:47:48.266" starttime="20171206 15:47:48.265"></status>
-</kw>
-<kw name="Location Should Contain" library="Selenium2Library">
-<doc>Verifies that current URL contains `expected`.</doc>
-<arguments>
-<arg>${Expected_URL}</arg>
-</arguments>
-<msg timestamp="20171206 15:47:48.282" level="INFO">Current location contains 'https://wnyc.demo2.wnyc.net'.</msg>
-<status status="PASS" endtime="20171206 15:47:48.282" starttime="20171206 15:47:48.266"></status>
-</kw>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171206 15:47:48.429" starttime="20171206 15:47:48.283"></status>
-</kw>
-<status status="PASS" endtime="20171206 15:47:48.430" critical="yes" starttime="20171206 15:47:41.328"></status>
+<status status="PASS" endtime="20171206 17:25:03.049" critical="yes" starttime="20171206 17:24:57.482"></status>
 </test>
-<status status="PASS" endtime="20171206 15:47:48.432" starttime="20171206 15:47:41.215"></status>
+<status status="PASS" endtime="20171206 17:25:03.052" starttime="20171206 17:24:57.279"></status>
 </suite>
 <statistics>
 <total>
