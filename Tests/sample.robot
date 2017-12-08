@@ -11,6 +11,11 @@ ${Demo}=    http://wnyc.demo2.wnyc.net
 *** Test Cases ***
 Open schedule page and verify the url
     open browser      ${Demo}/schedule    chrome
+    ${log}=     Get Selenium
+My SL Run On Failure Keyword
+    Get log              all
+    Maximize Browser
+    Capture Page Screenshot
 
     ${Current_URL} =  Execute Javascript  return window.location.href;
     location should be      ${Current_URL}
