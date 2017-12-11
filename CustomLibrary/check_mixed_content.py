@@ -37,3 +37,5 @@ messages = map(lambda l: l['message'], logs)
 has_console_logs = any(map(lambda m: m.find('Mixed Content:') >= 0, messages))
 print("Shoudn't have mixed content in console" if has_console_logs else 'Test passed')
 
+
+# this is a test
