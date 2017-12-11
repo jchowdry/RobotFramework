@@ -29,13 +29,20 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # driver = webdriver.Firefox(capabilities=d)
 
 # chrome
-driver = webdriver.Chrome()
-driver.get("http://wnyc.demo2.wnyc.net/podcasts")
-driver.implicitly_wait(3) # time for page to load
-logs = driver.get_log('browser')
-messages = map(lambda l: l['message'], logs)
-has_console_logs = any(map(lambda m: m.find('Mixed Content:') >= 0, messages))
-print("Shoudn't have mixed content in console" if has_console_logs else 'Test passed')
+def check_mixed_content_on_console():
+    driver = webdriver.Chrome()
+    driver.get("http://wnyc.demo2.wnyc.net/podcasts")
+    driver.implicitly_wait(3) # time for page to load
+    logs = driver.get_log('browser')
+    messages = map(lambda l: l['message'], logs)
+    has_console_logs = any(map(lambda m: m.find('Mixed Content:') >= 0, messages))
+    if has_console_logs:
+        print("Shoudn't have mixed content in console")
+        raise AssertionError('Mixed Content on Page ' + str(has_console_logs))
+    else:
+        print('Test passed')
 
 
-# this is a test
+check_mixed_content_on_console()
+
+
