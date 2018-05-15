@@ -1,0 +1,27 @@
+
+
+To run test against specific browser and environment:
+    robot -d Results -i demo -v BROWSER:chrome -v ENVIRONMENT:QA  Tests/Pledge/MonthlyDonationSuite.robot
+
+Run Test with specific Tags:
+    robot -d Results -i SmokeTest Tests/Pledge//MonthlyDonationSuite.robot
+
+Run Multiple Suites:
+    robot -d Results SmokeTest Tests
+
+Store test results to absolute path
+    robot -d /Users/jchowdry/Workspace/TestResults Tests/Pledge//MonthlyDonationSuite.robot
+
+
+To change the report name to be specific to what type of testing you are performing:
+    robot -d Results -N "Full Regression" Tests/Pledge/OneTimeDonationSuite.robot
+
+Supply Data into variable:
+    robot -d Results -v Browser:chrome -v https://pledge-demo.wnyc.org/donate/main-test/onestep/ -i demo Tests/Pledge//MonthlyDonationSuite.robot
+
+Randomize test:
+    robot -d Results -randomize Tests/Pledge//MonthlyDonationSuite.robot
+
+Debug your test:
+    robot -d Results --loglevel debug  -i demo  Tests/Pledge//MonthlyDonationSuite.robot
+
